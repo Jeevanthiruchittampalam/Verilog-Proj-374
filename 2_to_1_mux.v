@@ -2,7 +2,7 @@
 
 module 2_to_1_mux (
 input wire [31:0] inputOne, 
-input wire {31:0] inputTwo, 
+input wire [31:0] inputTwo, 
 input wire signal, 
 output reg [31:0] out
 );
