@@ -1,4 +1,4 @@
-~timescale 1ns/10ps
+`timescale 1ns/10ps
 
 //4 bit serial shift register without blocking assignment operators '='
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ELEC374Verilog
-Fri Feb 10 16:49:58 2023
+Sat Feb 11 10:19:26 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,8 +10,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |reg_32_bits
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,20 +44,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Feb 10 16:49:58 2023                ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 11 10:19:26 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; ELEC374Verilog                                   ;
 ; Top-level Entity Name              ; reg_32_bits                                      ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; N/A until Partition Merge                        ;
-;     Total combinational functions  ; N/A until Partition Merge                        ;
-;     Dedicated logic registers      ; N/A until Partition Merge                        ;
-; Total registers                    ; N/A until Partition Merge                        ;
-; Total pins                         ; N/A until Partition Merge                        ;
-; Total virtual pins                 ; N/A until Partition Merge                        ;
-; Total memory bits                  ; N/A until Partition Merge                        ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
-; Total PLLs                         ; N/A until Partition Merge                        ;
+; Total logic elements               ; 33                                               ;
+;     Total combinational functions  ; 33                                               ;
+;     Dedicated logic registers      ; 32                                               ;
+; Total registers                    ; 32                                               ;
+; Total pins                         ; 67                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -158,58 +165,131 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; reg_32_bits.v                    ; yes             ; User Verilog HDL File  ; C:/altera/Verilog Proj 374/reg_32_bits.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 33        ;
+;                                             ;           ;
+; Total combinational functions               ; 33        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 33        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 33        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 32        ;
+;     -- Dedicated logic registers            ; 32        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 67        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clr~input ;
+; Maximum fan-out                             ; 33        ;
+; Total fan-out                               ; 261       ;
+; Average fan-out                             ; 1.31      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |reg_32_bits               ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |reg_32_bits        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |reg_32_bits|q[0]~reg0     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |reg_32_bits ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; qInitial       ; 0     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Feb 10 16:49:57 2023
+    Info: Processing started: Sat Feb 11 10:18:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELEC374Verilog -c ELEC374Verilog
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32_bits.v
     Info (12023): Found entity 1: reg_32_bits
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_32_to_5.v
     Info (12023): Found entity 1: encoder_32_to_5
-Error (10170): Verilog HDL syntax error at MDR.v(5) near text ")";  expecting a direction File: C:/altera/Verilog Proj 374/MDR.v Line: 5
-Error (10112): Ignored design unit "MDR" at MDR.v(1) due to previous errors File: C:/altera/Verilog Proj 374/MDR.v Line: 1
-Error (10170): Verilog HDL syntax error at MDR.v(11) near text "2";  expecting a description File: C:/altera/Verilog Proj 374/MDR.v Line: 11
-Info (12021): Found 0 design units, including 0 entities, in source file mdr.v
-Error (10170): Verilog HDL syntax error at ALU.v(24) near text "wire";  expecting ";" File: C:/altera/Verilog Proj 374/ALU.v Line: 24
-Error (10170): Verilog HDL syntax error at ALU.v(56) near text ".";  expecting ")" File: C:/altera/Verilog Proj 374/ALU.v Line: 56
-Error (10170): Verilog HDL syntax error at ALU.v(74) near text ".";  expecting "endmodule" File: C:/altera/Verilog Proj 374/ALU.v Line: 74
-Error (10170): Verilog HDL syntax error at ALU.v(75) near text ")";  expecting ";" File: C:/altera/Verilog Proj 374/ALU.v Line: 75
-Error (10170): Verilog HDL syntax error at ALU.v(94) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 94
-Error (10149): Verilog HDL Declaration error at ALU.v(95): identifier "ALU_OP_XOR" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 95
-Error (10170): Verilog HDL syntax error at ALU.v(95) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 95
-Error (10149): Verilog HDL Declaration error at ALU.v(96): identifier "ALU_OP_NOT" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 96
-Error (10170): Verilog HDL syntax error at ALU.v(96) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 96
-Error (10149): Verilog HDL Declaration error at ALU.v(97): identifier "ALU_OP_SHR" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 97
-Error (10170): Verilog HDL syntax error at ALU.v(97) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 97
-Error (10149): Verilog HDL Declaration error at ALU.v(98): identifier "ALU_OP_SHL" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 98
-Error (10170): Verilog HDL syntax error at ALU.v(98) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 98
-Error (10149): Verilog HDL Declaration error at ALU.v(99): identifier "ALU_OP_SHRA" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 99
-Error (10170): Verilog HDL syntax error at ALU.v(99) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 99
-Error (10149): Verilog HDL Declaration error at ALU.v(100): identifier "ALU_OP_ROR" is already declared in the present scope File: C:/altera/Verilog Proj 374/ALU.v Line: 100
-Error (10170): Verilog HDL syntax error at ALU.v(100) near text "C_Register" File: C:/altera/Verilog Proj 374/ALU.v Line: 100
-Error (10759): Verilog HDL error at ALU.v(100): object a declared in a list of port declarations cannot be redeclared within the module body File: C:/altera/Verilog Proj 374/ALU.v Line: 100
-Error (10170): Verilog HDL syntax error at ALU.v(100) near text "}";  expecting ";" File: C:/altera/Verilog Proj 374/ALU.v Line: 100
-Info (12021): Found 0 design units, including 0 entities, in source file alu.v
+Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
+    Info (12023): Found entity 1: MDR
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(60): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(68): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(75): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(83): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
 Info (12021): Found 1 design units, including 1 entities, in source file add_half.v
     Info (12023): Found entity 1: Add_half
 Info (12021): Found 1 design units, including 1 entities, in source file add_full.v
     Info (12023): Found entity 1: Add_full
-Error (10759): Verilog HDL error at Add_rca_16.v(4): object c_out declared in a list of port declarations cannot be redeclared within the module body File: C:/altera/Verilog Proj 374/Add_rca_16.v Line: 4
-Error (10112): Ignored design unit "Add_rca_16" at Add_rca_16.v(3) due to previous errors File: C:/altera/Verilog Proj 374/Add_rca_16.v Line: 3
-Info (12021): Found 0 design units, including 0 entities, in source file add_rca_16.v
+Info (12021): Found 1 design units, including 1 entities, in source file add_rca_16.v
+    Info (12023): Found entity 1: Add_rca_16
 Info (12021): Found 1 design units, including 1 entities, in source file add_rca_4.v
     Info (12023): Found entity 1: Add_rca_4
-Error (10170): Verilog HDL syntax error at t_Add_half.v(1) near text "~";  expecting a description File: C:/altera/Verilog Proj 374/t_Add_half.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file t_add_half.v
-Error (10170): Verilog HDL syntax error at compare_32_CA.v(1) near text "~";  expecting a description File: C:/altera/Verilog Proj 374/compare_32_CA.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file compare_32_ca.v
-Error (10170): Verilog HDL syntax error at shiftreg_nb.v(1) near text "~";  expecting a description File: C:/altera/Verilog Proj 374/shiftreg_nb.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file shiftreg_nb.v
+Info (12021): Found 1 design units, including 1 entities, in source file shiftreg_nb.v
+    Info (12023): Found entity 1: shiftreg_nb
 Info (12021): Found 1 design units, including 1 entities, in source file mux_4_32_ca.v
     Info (12023): Found entity 1: Mux_4_32_CA
 Info (12021): Found 1 design units, including 1 entities, in source file add_rca_32.v
@@ -228,12 +308,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_32_
     Info (12023): Found entity 1: mux_32_to_1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_to_1.v
     Info (12023): Found entity 1: mux_2_to_1
+Info (12127): Elaborating entity "reg_32_bits" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/altera/Verilog Proj 374/output_files/ELEC374Verilog.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 27 errors, 1 warning
-    Error: Peak virtual memory: 4577 megabytes
-    Error: Processing ended: Fri Feb 10 16:49:58 2023
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 33 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Sat Feb 11 10:19:26 2023
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

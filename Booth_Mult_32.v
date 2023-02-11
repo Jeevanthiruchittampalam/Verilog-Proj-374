@@ -1,4 +1,4 @@
-module Booth_Mult_32 (output [63:0] product, input [31:0] a, b);
+module Booth_Mult_32 (output reg [63:0] product, input [31:0] a, b, input wire clk);
   reg [31:0] a_reg, b_reg, sum;
   reg [32:0] c_out;
   reg [31:0] c_in;

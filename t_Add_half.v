@@ -1,4 +1,4 @@
-~timescale 1ns/10ps
+/*~timescale 1ns/10ps
 
 module t_Add_half();
 	wire sum, c_out;
@@ -14,3 +14,5 @@ module t_Add_half();
 	#10 b = 0;
 	end
 endmodule
+
+*/

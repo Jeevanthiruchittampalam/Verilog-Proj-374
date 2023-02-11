@@ -1,25 +1,24 @@
 module MDR (
-  input clk, mdr_read, clr, MDRin,
-  input [31:0] BusMuxOut, Mdatain,
-  output [31:0] q,
+  input clk, mdr_read, clr,
+  input [31:0] BusMuxOut, Mdatain, MDRin,
+  output reg [31:0] q
 );
 
 wire [31:0] S;
 
-endmodule
-
-2_to_1_mux my_mux (
-  .input1(BusMuxOut),
-  .input2(Mdatain),
+mux_2_to_1 my_mux (
+  .inputOne(BusMuxOut),
+  .inputTwo(Mdatain),
   .signal(mdr_read),
   .out(S)
 );
 
 reg_32_bits my_reg (
   .clk(clk),
-  .clear(clr),
+  .clr(clr),
   .enable(MDRin),
   .d(S),
   .q(q)
 );
 
+endmodule
