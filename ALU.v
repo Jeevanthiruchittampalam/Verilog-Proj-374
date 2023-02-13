@@ -10,6 +10,7 @@ module ALU(
   input clk, clr,
   input wire [31:0] a,
   input wire [31:0] b,
+  input wire [31:0] y,
   //for operator, can't be 4 bits because there could be
   //more than 16 functions
   input wire [4:0] opcode,
