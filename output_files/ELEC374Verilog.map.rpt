@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ELEC374Verilog
-Sat Feb 11 10:19:26 2023
+Sun Feb 12 19:25:51 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,15 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |reg_32_bits
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,20 +37,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 11 10:19:26 2023            ;
+; Analysis & Synthesis Status        ; Failed - Sun Feb 12 19:25:51 2023                ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; ELEC374Verilog                                   ;
 ; Top-level Entity Name              ; reg_32_bits                                      ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 33                                               ;
-;     Total combinational functions  ; 33                                               ;
-;     Dedicated logic registers      ; 32                                               ;
-; Total registers                    ; 32                                               ;
-; Total pins                         ; 67                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
+; Total logic elements               ; N/A until Partition Merge                        ;
+;     Total combinational functions  ; N/A until Partition Merge                        ;
+;     Dedicated logic registers      ; N/A until Partition Merge                        ;
+; Total registers                    ; N/A until Partition Merge                        ;
+; Total pins                         ; N/A until Partition Merge                        ;
+; Total virtual pins                 ; N/A until Partition Merge                        ;
+; Total memory bits                  ; N/A until Partition Merge                        ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
+; Total PLLs                         ; N/A until Partition Merge                        ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -165,105 +158,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; reg_32_bits.v                    ; yes             ; User Verilog HDL File  ; C:/altera/Verilog Proj 374/reg_32_bits.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 33        ;
-;                                             ;           ;
-; Total combinational functions               ; 33        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 33        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 33        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 32        ;
-;     -- Dedicated logic registers            ; 32        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 67        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clr~input ;
-; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 261       ;
-; Average fan-out                             ; 1.31      ;
-+---------------------------------------------+-----------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |reg_32_bits               ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |reg_32_bits        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 32    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |reg_32_bits|q[0]~reg0     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |reg_32_bits ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; qInitial       ; 0     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:06     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Feb 11 10:18:59 2023
+    Info: Processing started: Sun Feb 12 19:25:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELEC374Verilog -c ELEC374Verilog
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32_bits.v
@@ -308,20 +209,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_32_
     Info (12023): Found entity 1: mux_32_to_1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_to_1.v
     Info (12023): Found entity 1: mux_2_to_1
-Info (12127): Elaborating entity "reg_32_bits" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
+Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
+Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
+Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
+Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
+Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
+Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
+Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
+Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
+Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
+Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
+Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
+Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
+Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
+Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
+Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
+Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
+Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
+Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
+Info (12021): Found 0 design units, including 0 entities, in source file datapath_tb.v
 Info (144001): Generated suppressed messages file C:/altera/Verilog Proj 374/output_files/ELEC374Verilog.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4623 megabytes
-    Info: Processing ended: Sat Feb 11 10:19:26 2023
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:01
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 19 errors, 5 warnings
+    Error: Peak virtual memory: 4576 megabytes
+    Error: Processing ended: Sun Feb 12 19:25:51 2023
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

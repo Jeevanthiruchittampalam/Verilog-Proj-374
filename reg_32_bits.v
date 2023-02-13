@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 module reg_32_bits #(parameter qInitial = 0)(
 	input wire clk,
 	input wire clr,
