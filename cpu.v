@@ -1,4 +1,4 @@
-module cpu_bus(
+module cpu(
 input clk, clr, stop,
 input[31:0] bus_Signal;
 output[31:0] bus_contents,   //busmuxout feeds to this
@@ -8,6 +8,7 @@ output[5:0] operation  //INPUT OR OUTPUT?
 
 ); //instantiating bus
 
+//ALU, PC, Register File
 
 //enable wires for special registers:
 wire MARin, PCin, MDRin, IRin, Yin, IncPC, Read, 
@@ -41,6 +42,8 @@ wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10ou
 	wire [31:0] R14_data_out;
 	wire [31:0] R15_data_out;
 
+
+    //other registers
 	wire [31:0] HI_data_out;
 	wire [31:0] LO_data_out;
 	wire [31:0] ZHigh_data_out;
@@ -220,3 +223,22 @@ ALU MY_ALU(
 
 endmodule
 
+
+
+/* 
+Design IR?
+Write testbenches for 13 functions
+Alter testbenches to work without a bus file
+Compare to github. 
+
+Friday: Finish cpu file, run testbench 1
+Saturday: Run testbenches 2-4
+Sunday: Run testbenches 5-8
+Monday: Run testbenches 9-11
+Tuesday: Run testbenches 12-13
+Wednesday: Write lab report, prepare for demo
+
+
+
+
+*/
