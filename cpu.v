@@ -1,8 +1,8 @@
 module cpu(
 input clk, clr, stop,
-input[31:0] bus_Signal;
+input[31:0] bus_Signal,
 output[31:0] bus_contents,   //busmuxout feeds to this
-output[31:0] outport_Output;
+output[31:0] outport_Output,
 output[5:0] operation  //INPUT OR OUTPUT?
 
 
@@ -182,7 +182,7 @@ wire [3:0]  decoder_in;
     .PCSignal(PCout),
     .MDRSignal(MDRout),
     .InportSignal(In.portout),
-    .CSignal(Cout)
+    .CSignal(Cout), test
     //output
     .encoderOutput(bus_encoder_signal)
     

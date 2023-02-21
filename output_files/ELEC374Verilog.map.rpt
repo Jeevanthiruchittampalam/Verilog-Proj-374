@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ELEC374Verilog
-Sun Feb 12 19:25:51 2023
+Tue Feb 21 13:17:12 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Feb 12 19:25:51 2023                ;
+; Analysis & Synthesis Status        ; Failed - Tue Feb 21 13:17:12 2023                ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; ELEC374Verilog                                   ;
 ; Top-level Entity Name              ; reg_32_bits                                      ;
@@ -164,76 +164,66 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Feb 12 19:25:50 2023
+    Info: Processing started: Tue Feb 21 13:17:09 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELEC374Verilog -c ELEC374Verilog
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file reg_32_bits.v
-    Info (12023): Found entity 1: reg_32_bits
-Info (12021): Found 1 design units, including 1 entities, in source file encoder_32_to_5.v
-    Info (12023): Found entity 1: encoder_32_to_5
-Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
-    Info (12023): Found entity 1: MDR
-Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(60): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(68): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(75): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(83): ignored dangling comma in List of Port Connections
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU
-Info (12021): Found 1 design units, including 1 entities, in source file add_half.v
-    Info (12023): Found entity 1: Add_half
-Info (12021): Found 1 design units, including 1 entities, in source file add_full.v
-    Info (12023): Found entity 1: Add_full
-Info (12021): Found 1 design units, including 1 entities, in source file add_rca_16.v
-    Info (12023): Found entity 1: Add_rca_16
-Info (12021): Found 1 design units, including 1 entities, in source file add_rca_4.v
-    Info (12023): Found entity 1: Add_rca_4
 Info (12021): Found 0 design units, including 0 entities, in source file t_add_half.v
-Info (12021): Found 0 design units, including 0 entities, in source file compare_32_ca.v
-Info (12021): Found 1 design units, including 1 entities, in source file shiftreg_nb.v
-    Info (12023): Found entity 1: shiftreg_nb
-Info (12021): Found 1 design units, including 1 entities, in source file mux_4_32_ca.v
-    Info (12023): Found entity 1: Mux_4_32_CA
-Info (12021): Found 1 design units, including 1 entities, in source file add_rca_32.v
-    Info (12023): Found entity 1: Add_rca_32
 Info (12021): Found 1 design units, including 1 entities, in source file sub_rca_32.v
     Info (12023): Found entity 1: sub_rca_32
-Info (12021): Found 1 design units, including 1 entities, in source file booth_mult_32.v
-    Info (12023): Found entity 1: Booth_Mult_32
-Warning (10463): Verilog HDL Declaration warning at divider.v(10): "bit" is SystemVerilog-2005 keyword
-Info (12021): Found 1 design units, including 1 entities, in source file divider.v
-    Info (12023): Found entity 1: divider
-Info (12021): Found 1 design units, including 1 entities, in source file encoder_8_3.v
-    Info (12023): Found entity 1: encoder_8_3
-Info (12021): Found 0 design units, including 0 entities, in source file cla_32.v
+Info (12021): Found 1 design units, including 1 entities, in source file reg_32_bits.v
+    Info (12023): Found entity 1: reg_32_bits
+Error (10759): Verilog HDL error at rca_32.v(4): object c_in declared in a list of port declarations cannot be redeclared within the module body File: C:/altera/Verilog Proj 374/rca_32.v Line: 4
+Error (10759): Verilog HDL error at rca_32.v(4): object c_out declared in a list of port declarations cannot be redeclared within the module body File: C:/altera/Verilog Proj 374/rca_32.v Line: 4
+Error (10112): Ignored design unit "Add_rca_32" at rca_32.v(3) due to previous errors File: C:/altera/Verilog Proj 374/rca_32.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file rca_32.v
 Info (12021): Found 1 design units, including 1 entities, in source file mux_32_to_1.v
     Info (12023): Found entity 1: mux_32_to_1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_to_1.v
     Info (12023): Found entity 1: mux_2_to_1
-Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
-Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
-Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
-Error (10170): Verilog HDL syntax error at datapath_tb.v(11) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 11
-Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
-Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
-Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
-Error (10170): Verilog HDL syntax error at datapath_tb.v(12) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 12
-Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
-Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
-Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
-Error (10170): Verilog HDL syntax error at datapath_tb.v(13) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 13
-Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
-Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
-Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
-Error (10170): Verilog HDL syntax error at datapath_tb.v(54) near text ™ File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 54
-Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text â File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
-Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text "â";  expecting ";" File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
-Error (10170): Verilog HDL syntax error at datapath_tb.v(59) near text € File: C:/altera/Verilog Proj 374/datapath_tb.v Line: 59
-Info (12021): Found 0 design units, including 0 entities, in source file datapath_tb.v
+Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
+    Info (12023): Found entity 1: MDR
+Error (10170): Verilog HDL syntax error at encoder_32_to_5.v(2) near text ";";  expecting ")" File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 2
+Error (10170): Verilog HDL syntax error at encoder_32_to_5.v(31) near text ":";  expecting ";" File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 31
+Error (10170): Verilog HDL syntax error at encoder_32_to_5.v(33) near text "else";  expecting "end" File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 33
+Error (10170): Verilog HDL syntax error at encoder_32_to_5.v(49) near text ":";  expecting ")" File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 49
+Error (10170): Verilog HDL syntax error at encoder_32_to_5.v(51) near text "else";  expecting "end" File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 51
+Error (10112): Ignored design unit "encoder_32_to_5" at encoder_32_to_5.v(1) due to previous errors File: C:/altera/Verilog Proj 374/encoder_32_to_5.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file encoder_32_to_5.v
+Info (12021): Found 1 design units, including 1 entities, in source file encoder_8_3.v
+    Info (12023): Found entity 1: encoder_8_3
+Warning (10463): Verilog HDL Declaration warning at divider.v(10): "bit" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file divider.v
+    Info (12023): Found entity 1: divider
+Error (10170): Verilog HDL syntax error at cpu.v(20) near text ".";  expecting ";" File: C:/altera/Verilog Proj 374/cpu.v Line: 20
+Error (10112): Ignored design unit "cpu" at cpu.v(1) due to previous errors File: C:/altera/Verilog Proj 374/cpu.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file cpu.v
+Info (12021): Found 0 design units, including 0 entities, in source file compare_32_ca.v
+Info (12021): Found 0 design units, including 0 entities, in source file cla_32.v
+Info (12021): Found 1 design units, including 1 entities, in source file booth_mult_32.v
+    Info (12023): Found entity 1: Booth_Mult_32
+Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
+    Info (12023): Found entity 1: and_tb
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(61): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(69): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(76): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at ALU.v(84): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file add_rca_32.v
+    Info (12023): Found entity 1: Add_rca_32
+Info (12021): Found 1 design units, including 1 entities, in source file add_rca_16.v
+    Info (12023): Found entity 1: Add_rca_16
+Info (12021): Found 1 design units, including 1 entities, in source file add_rca_4.v
+    Info (12023): Found entity 1: Add_rca_4
+Info (12021): Found 1 design units, including 1 entities, in source file add_half.v
+    Info (12023): Found entity 1: Add_half
+Info (12021): Found 1 design units, including 1 entities, in source file add_full.v
+    Info (12023): Found entity 1: Add_full
 Info (144001): Generated suppressed messages file C:/altera/Verilog Proj 374/output_files/ELEC374Verilog.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 19 errors, 5 warnings
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 11 errors, 5 warnings
     Error: Peak virtual memory: 4576 megabytes
-    Error: Processing ended: Sun Feb 12 19:25:51 2023
-    Error: Elapsed time: 00:00:01
+    Error: Processing ended: Tue Feb 21 13:17:12 2023
+    Error: Elapsed time: 00:00:03
     Error: Total CPU time (on all processors): 00:00:01
 
 
