@@ -17,7 +17,7 @@ wire MARin, PCin, MDRin, IRin, Yin, IncPC, Read,
 
 //23 wires for the 32-5 encoder
 wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
-    HIout, LOout, Zhighout, Zlowout, PCout, MDRout, In.portout, Cout;
+    HIout, LOout, Zhighout, Zlowout, PCout, MDRout, Inportout, Cout;
 
 
 //IncPC is the clear signal for the PC
@@ -181,7 +181,7 @@ wire [3:0]  decoder_in;
     .ZLOSignal(Zlowout),
     .PCSignal(PCout),
     .MDRSignal(MDRout),
-    .InportSignal(In.portout),
+    .InportSignal(Inportout),
     .CSignal(Cout), test
     //output
     .encoderOutput(bus_encoder_signal)
