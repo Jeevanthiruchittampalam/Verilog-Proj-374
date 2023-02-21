@@ -97,22 +97,22 @@ wire [3:0]  decoder_in;
 
     
 
-    reg_32_bits R0(clk. clr, enableR[0], bus_contents, R0_data_out);
-    reg_32_bits R1(clk. clr, enableR[1], bus_contents, R1_data_out);
-    reg_32_bits R2(clk. clr, enableR[2], bus_contents, R2_data_out);
-    reg_32_bits R3(clk. clr, enableR[3], bus_contents, R3_data_out);
-    reg_32_bits R4(clk. clr, enableR[4], bus_contents, R4_data_out);
-    reg_32_bits R5(clk. clr, enableR[5], bus_contents, R5_data_out);
-    reg_32_bits R6(clk. clr, enableR[6], bus_contents, R6_data_out);
-    reg_32_bits R7(clk. clr, enableR[7], bus_contents, R7_data_out);
-    reg_32_bits R8(clk. clr, enableR[8], bus_contents, R8_data_out);
-    reg_32_bits R9(clk. clr, enableR[9], bus_contents, R9_data_out);
-    reg_32_bits R10(clk. clr, enableR[10], bus_contents, R10_data_out);
-    reg_32_bits R11(clk. clr, enableR[11], bus_contents, R11_data_out);
-    reg_32_bits R12(clk. clr, enableR[12], bus_contents, R12_data_out);
-    reg_32_bits R13(clk. clr, enableR[13], bus_contents, R13_data_out);
-    reg_32_bits R14(clk. clr, enableR[14], bus_contents, R14_data_out);
-    reg_32_bits R15(clk. clr, enableR[15], bus_contents, R15_data_out);
+    reg_32_bits R0(clk, clr, enableR[0], bus_contents, R0_data_out);
+    reg_32_bits R1(clk, clr, enableR[1], bus_contents, R1_data_out);
+    reg_32_bits R2(clk, clr, enableR[2], bus_contents, R2_data_out);
+    reg_32_bits R3(clk, clr, enableR[3], bus_contents, R3_data_out);
+    reg_32_bits R4(clk, clr, enableR[4], bus_contents, R4_data_out);
+    reg_32_bits R5(clk, clr, enableR[5], bus_contents, R5_data_out);
+    reg_32_bits R6(clk, clr, enableR[6], bus_contents, R6_data_out);
+    reg_32_bits R7(clk, clr, enableR[7], bus_contents, R7_data_out);
+    reg_32_bits R8(clk, clr, enableR[8], bus_contents, R8_data_out);
+    reg_32_bits R9(clk, clr, enableR[9], bus_contents, R9_data_out);
+    reg_32_bits R10(clk, clr, enableR[10], bus_contents, R10_data_out);
+    reg_32_bits R11(clk, clr, enableR[11], bus_contents, R11_data_out);
+    reg_32_bits R12(clk, clr, enableR[12], bus_contents, R12_data_out);
+    reg_32_bits R13(clk, clr, enableR[13], bus_contents, R13_data_out);
+    reg_32_bits R14(clk, clr, enableR[14], bus_contents, R14_data_out);
+    reg_32_bits R15(clk, clr, enableR[15], bus_contents, R15_data_out);
 
     //other registers
 
@@ -124,8 +124,8 @@ wire [3:0]  decoder_in;
     reg_32_bits LO(clk, clr, LOin, bus_contents, LO_data_out);
 
     //two registers for the Z output (64 bits)
-    reg_32_bits Z_High(clk, clr, ZHighIn, c_data_out[63:32], ZHigh_data_out);
-    reg_32_bits Z_Low(clk, clr, ZLowIn, c_data[63:32], ZLow_data_out);
+    reg_32_bits Z_High(clk, clr, ZHighIn, C_data_out[63:32], ZHigh_data_out);
+    reg_32_bits Z_Low(clk, clr, ZLowIn, C_data_out[31:0], ZLow_data_out);
 
 
     //IR and PC
@@ -145,7 +145,7 @@ wire [3:0]  decoder_in;
     //--------------------------------------------------------------------------------------------------
 
     //input and output port registers. 
-    reg_32_bits Inport_reg(clk, clr, 1'd1, bus_input, Input_Port_dataout);
+    reg_32_bits Inport_reg(clk, clr, 1'd1, bus_Signal, Input_Port_dataout);
 	reg_32_bits Outport_reg(clk, clr, enableOutport, bus_contents, Outport_Output);
 
     //y register
@@ -159,6 +159,7 @@ wire [3:0]  decoder_in;
     //defining 32-5 ENCODER
 
     encoder_32_to_5 busEncoder(
+
     .r0Signal(R0out),
     .r1Signal(R1out),
     .r2Signal(R2out),
@@ -182,7 +183,7 @@ wire [3:0]  decoder_in;
     .PCSignal(PCout),
     .MDRSignal(MDRout),
     .InportSignal(Inportout),
-    .CSignal(Cout), test
+    .CSignal(Cout), 
     //output
     .encoderOutput(bus_encoder_signal)
     

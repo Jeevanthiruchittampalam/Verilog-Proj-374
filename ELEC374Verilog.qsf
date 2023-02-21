@@ -55,7 +55,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE t_Add_half.v
 set_global_assignment -name VERILOG_FILE sub_rca_32.v
 set_global_assignment -name VERILOG_FILE reg_32_bits.v
-set_global_assignment -name VERILOG_FILE rca_32.v
 set_global_assignment -name VERILOG_FILE mux_32_to_1.v
 set_global_assignment -name VERILOG_FILE mux_2_to_1.v
 set_global_assignment -name VERILOG_FILE MDR.v
@@ -63,7 +62,6 @@ set_global_assignment -name VERILOG_FILE encoder_32_to_5.v
 set_global_assignment -name VERILOG_FILE encoder_8_3.v
 set_global_assignment -name VERILOG_FILE divider.v
 set_global_assignment -name VERILOG_FILE cpu.v
-set_global_assignment -name VERILOG_FILE compare_32_CA.v
 set_global_assignment -name VERILOG_FILE CLA_32.v
 set_global_assignment -name VERILOG_FILE Booth_Mult_32.v
 set_global_assignment -name VERILOG_FILE and_tb.v

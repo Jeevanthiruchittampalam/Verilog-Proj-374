@@ -1,34 +1,34 @@
 module encoder_32_to_5 (
-input wire r0Signal;
-input wire r1Signal;
-input wire r2Signal;
-input wire r3Signal;
-input wire r4Signal;
-input wire r5Signal;
-input wire r6Signal;
-input wire r7Signal;
-input wire r8Signal;
-input wire r9Signal;
-input wire r10Signal;
-input wire r11Signal;
-input wire r12Signal;
-input wire r13Signal;
-input wire r14Signal;
-input wire r15Signal;
-input wire HISignal;
-input wire LOSignal;
-input wire ZHISignal;
-input wire ZLOSignal;
-input wire PCSignal;
-input wire MDRSignal;
-input wire InportSignal;
-input wire CSignal; 
+input wire r0Signal,
+input wire r1Signal,
+input wire r2Signal,
+input wire r3Signal,
+input wire r4Signal,
+input wire r5Signal,
+input wire r6Signal,
+input wire r7Signal,
+input wire r8Signal,
+input wire r9Signal,
+input wire r10Signal,
+input wire r11Signal,
+input wire r12Signal,
+input wire r13Signal,
+input wire r14Signal,
+input wire r15Signal,
+input wire HISignal,
+input wire LOSignal,
+input wire ZHISignal,
+input wire ZLOSignal,
+input wire PCSignal,
+input wire MDRSignal,
+input wire InportSignal,
+input wire CSignal,
 
 output reg [4:0] encoderOutput
 );
 
 	always@(*) begin
-      if (r0Signal == 1):
+      if (r0Signal == 1)
          encoderOutput = 5'b00001;
       else if(r1Signal == 1)
          encoderOutput = 5'b00010;
@@ -43,10 +43,10 @@ output reg [4:0] encoderOutput
       else if(r6Signal == 1)
          encoderOutput = 5'b00111;
       else if(r7Signal == 1)
-         encode8Output = 5'b01000;
+         encoderOutput = 5'b01000;
       else if(r9Signal == 1)
          encoderOutput = 5'b01001;
-      else if(r10Signal == 1:
+      else if(r10Signal == 1)
          encoderOutput = 5'b01010;
       else if(r11Signal == 1)
          encoderOutput = 5'b01011;
@@ -76,8 +76,7 @@ output reg [4:0] encoderOutput
          encoderOutput = 5'b10111;
       else if (CSignal == 1)
          encoderOutput = 5'b11000;
-
-      else encoderOuput = 0;  //default?
+      //else encoderOuput = 0;  //default?
 
    end
 

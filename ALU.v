@@ -57,7 +57,7 @@ Add_rca_32 my_32_add(
 	.a(a),
 	.b(b),
 	.sum(addtemp),
-	.c_out(carry),
+	.c_out(carry)
 );
 
 sub_rca_32 my_32_sub(
@@ -65,14 +65,14 @@ sub_rca_32 my_32_sub(
 	.a(a),
 	.b(b),
 	.sum(subtemp),
-	.c_out(carry),
+	.c_out(carry)
 );
 
 //module Booth_Mult_32 (output [63:0] product, input [31:0] a, b);
 Booth_Mult_32 my_32_mult(
 	.a(a),
 	.b(b),
-	.product(multtemp),
+	.product(multtemp)
 );
 
 divider my_32_divider(
@@ -80,7 +80,7 @@ divider my_32_divider(
 	.rst(clr),
 	.dividend(a),
 	.divisor(b),
-	.quotient(divtemp),
+	.quotient(divtemp)
 );
  
 
