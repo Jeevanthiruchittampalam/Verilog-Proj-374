@@ -22,6 +22,24 @@ wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10ou
 
 //IncPC is the clear signal for the PC
 
+reg  [15:0] enableR; //enable signals for each register
+
+wire [15:0] R_enableIn; 
+wire [31:0] BusMuxInR0_to_AND;
+	
+wire [15:0] enableR_IR; 
+wire [15:0] Rout_IR;
+reg  [15:0] Rout;
+wire [3:0]  decoder_in;
+
+    always@(*)begin		
+			if (enableR_IR)enableR<=enableR_IR; 
+			else enableR<=R_enableIn;
+			if (Rout_IR)Rout<=Rout_IR; 
+			else Rout<=16'b0;	
+	end 
+
+
 //wire PCout, Zhighout, Zlowout, MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, 
 
 	 //Inputs to the bus's 32-to_1 multiplexer
@@ -77,7 +95,7 @@ wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10ou
 	
     */
 
-    reg  [15:0] enableR; //enable signals for each register? Where does it come from
+    
 
     reg_32_bits R0(clk. clr, enableR[0], bus_contents, R0_data_out);
     reg_32_bits R1(clk. clr, enableR[1], bus_contents, R1_data_out);
