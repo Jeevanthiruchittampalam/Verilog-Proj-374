@@ -1,8 +1,8 @@
 module pc_reg(
 
-output reg [31:0] Q,
+input clk, clr, increment, wr,
 input [31:0] D,
-input wr, increment, clr, clk
+output reg [31:0] Q,
 );
 
 initial Q = 0;

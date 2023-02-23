@@ -8,19 +8,24 @@ module data_path (
     input PCin, PCout, IRin,
 
     //mdr and mar?
-    input MDRin, MDRout, MARin,
+    input MDRin, MDRout, MARin, IncPC, //IncPC for incrementing PC
 
     input Cout, InPortout,
 
     //HI and LO REgs
     input HIin, LOin, HIout, LOout, ZLowout, ZHighout,
 
+    
+
     //Y, ALU, and Z
     input Yin, Zlowin, Zhighin, //something for alu here
 
+    input [4:0] ALUselect, //select instruction for alu
+
     output R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15,
 
-    output [63:0] ZReg
+    //64 bits for the z outputs. 
+	wire [63:0] C_data_out;
 
 );
 //the bus wire seems to be the input for everything
@@ -28,7 +33,7 @@ wire [31:0] bus;
 
 wire clr;
 wire IROut;
-wire [31:0] ZLowData, ZHighData;
+//wire [31:0] ZLowData, ZHighData; do we use this?
 
 //Ywire going in and ALU output??
 wire [31:0] YData, XData;
@@ -58,7 +63,7 @@ reg_32_bits R15(clk, clr, R15in, bus, BusMuxIn_R15);
 
 //PC and IR
 reg_32_bits ir(clk, clr, iRin, bus, IRout); 
-reg_32_bits pc(clk, clr, PCin, bus, BusMuxIn_PC); // fix this?
+reg_32_bits pc(clk, clr, incPC, PCin, bus, BusMuxIn_PC);
 
 // MAR and MDR
 reg_32_bits mar(clk, clr, MARin, bus, busMuxInMAR);
@@ -66,7 +71,7 @@ MDR mdr(clk, MDRread, clr, bus, Mdatain, MDRin, busMuxInMDR);
 
 
 // clk, clr, enable, input,output is OURS
-// output, input, enable,clk,clr is HIS
+// output, input, enable,clk,clr
 
 //Special Registers - HI, LO, Y, and Zhi and Zlo
 reg_32_bits hi(clk, clr, HIin, bus, busMUXInHI);
@@ -74,15 +79,21 @@ reg_32_bits lo(clk, clr, LOin, bus, BusMuxIn_LO);
 reg_32_bits y(clk, clr, Yin, bus, YData);
 
 //jeev start here
-reg_32_bits zHI(clk, clr, ZHighData, bus, ZHighout); //Jeevan do later 
-reg_32_bits ZLO(clk, clr, ZLowData, bus, ZLowout);  //Jeevan do later 
+reg_32_bits zHI(clk, clr, zHighin, C_data_out[63:32], ZHighout); //
+reg_32_bits ZLO(clk, clr, zLowIn, C_data_out[31:0], ZLowout);  //
+
+
 
 //ALU
 ALU alu(clk, clr, );
 //alu alu(ALUselect, bus, Ydata, ZLowData, ZHighData, carry);
-assign busInZHI = ZReg[63:0];
-assign busInZLO = ZReg[31:0];
-//jeev end here
+
+
+
+ALU MY_ALU(clk, clr, bus, bus, Ydata, ALUselect, C_data_out);
+assign BusMuxIn_Z_high = C_data_out[63:0];
+assign BusMuxIn_Z_low = C_data_out[31:0];
+
 
 
 //Bus
