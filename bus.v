@@ -55,7 +55,7 @@ module bus (
 	input [31:0] BusMuxIn_InPort,
 	input [31:0] C_sign_extended,
 	
-	// Multiplexer's output that feeds to the bus
+	// Multiplexer's output that feeds out of the bus and into the datapath
 	output reg [31:0] BusMuxOut,	
 );
 

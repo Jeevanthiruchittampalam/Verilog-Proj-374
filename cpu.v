@@ -71,7 +71,7 @@ wire [3:0]  decoder_in;
 	wire [31:0] InPort_data_out;
 	wire [31:0] Y_data_out;
 	wire [31:0] RAM_data_out;
-	wire [8:0] MAR_data_out;
+	wire [31:0] MAR_data_out;
 	wire [31:0] IR_data_out;
 	wire [31:0] C_sign_extended;
 
@@ -175,7 +175,7 @@ wire [3:0]  decoder_in;
     .r12Signal(R12out),
     .r13Signal(R13out),
     .r14Signal(R14out),
-    .r14Signal(R15out),
+    .r15Signal(R15out),
     .HISignal(HIout),
     .LOSignal(LOout),
     .ZHISignal(Zhighout),
@@ -245,7 +245,6 @@ endmodule
 
 
 /* 
-Design IR?
 Write testbenches for 13 functions
 Alter testbenches to work without a bus file
 Compare to github. 
