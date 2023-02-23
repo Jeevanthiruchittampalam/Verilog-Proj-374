@@ -1,0 +1,134 @@
+# Reading C:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl 
+# do ELEC374Verilog_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying C:\altera\13.0sp1\modelsim_ae\win32aloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/sub_rca_32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sub_rca_32
+# 
+# Top level modules:
+# 	sub_rca_32
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/reg_32_bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg_32_bits
+# 
+# Top level modules:
+# 	reg_32_bits
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/mux_32_to_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_32_to_1
+# 
+# Top level modules:
+# 	mux_32_to_1
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/mux_2_to_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_2_to_1
+# 
+# Top level modules:
+# 	mux_2_to_1
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/encoder_32_to_5.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module encoder_32_to_5
+# 
+# Top level modules:
+# 	encoder_32_to_5
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/divider.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module divider
+# 
+# Top level modules:
+# 	divider
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/cpu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Booth_Mult_32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Booth_Mult_32
+# 
+# Top level modules:
+# 	Booth_Mult_32
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_rca_32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_32
+# 
+# Top level modules:
+# 	Add_rca_32
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_rca_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_16
+# 
+# Top level modules:
+# 	Add_rca_16
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_rca_4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_4
+# 
+# Top level modules:
+# 	Add_rca_4
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_half.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_half
+# 
+# Top level modules:
+# 	Add_half
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_full.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_full
+# 
+# Top level modules:
+# 	Add_full
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/and_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and_tb
+# 
+# Top level modules:
+# 	and_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  and_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps and_tb 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.and_tb
+# Loading work.cpu
+# Loading work.reg_32_bits
+# Loading work.mux_2_to_1
+# Loading work.encoder_32_to_5
+# Loading work.mux_32_to_1
+# Loading work.ALU
+# Loading work.Add_rca_32
+# Loading work.Add_rca_16
+# Loading work.Add_rca_4
+# Loading work.Add_full
+# Loading work.Add_half
+# Loading work.sub_rca_32
+# Loading work.Booth_Mult_32
+# Loading work.divider
+# ** Fatal: (vsim-3365) C:/altera/Verilog Proj 374/and_tb.v(26): Too many port connections. Expected 7, found 37.
+#    Time: 0 ps  Iteration: 0  Instance: /and_tb/DUT File: C:/altera/Verilog Proj 374/cpu.v
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./ELEC374Verilog_run_msim_rtl_verilog.do PAUSED at line 25

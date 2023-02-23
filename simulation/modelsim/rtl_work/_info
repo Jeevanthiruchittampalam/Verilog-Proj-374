@@ -1,0 +1,312 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\Verilog Proj 374\simulation\modelsim
+vAdd_full
+IXU`2^3Xn8C<j90CniBz`b2
+V2>7Ia;@R;K@H6aJodZa=22
+Z1 dC:\altera\Verilog Proj 374\simulation\modelsim
+w1676056495
+8C:/altera/Verilog Proj 374/Add_full.v
+FC:/altera/Verilog Proj 374/Add_full.v
+L0 2
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/altera/Verilog Proj 374} -O0
+n@add_full
+!i10b 1
+!s100 UKbhe9VDO7SHG:0AD>BeD0
+!s85 0
+!s108 1677019099.299000
+!s107 C:/altera/Verilog Proj 374/Add_full.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Add_full.v|
+!s101 -O0
+vAdd_half
+IR`2?Lm0;2cHnmfoa[n5]I3
+V[:bg0@9CjgdAL:ZP;OC[R2
+R1
+w1676056401
+8C:/altera/Verilog Proj 374/Add_half.v
+FC:/altera/Verilog Proj 374/Add_half.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@add_half
+!i10b 1
+!s100 hX8[9X@96c@o[CI:1JG_j0
+!s85 0
+!s108 1677019099.190000
+!s107 C:/altera/Verilog Proj 374/Add_half.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Add_half.v|
+!s101 -O0
+vAdd_rca_16
+I:8cNeSXA9F2Bk9JJRQ?3_1
+Vocfe0J^cGX;aIKKVJWO4N0
+R1
+w1676128172
+8C:/altera/Verilog Proj 374/Add_rca_16.v
+FC:/altera/Verilog Proj 374/Add_rca_16.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@add_rca_16
+!i10b 1
+!s100 c`iloAM7Uch;d?mo5j4h_1
+!s85 0
+!s108 1677019098.972000
+!s107 C:/altera/Verilog Proj 374/Add_rca_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Add_rca_16.v|
+!s101 -O0
+vAdd_rca_32
+I0Sa^GJ1gn_ckWo6mh^=oK0
+VBC^RQ@nQH8CaNgHO1;Do92
+R1
+w1676062842
+8C:/altera/Verilog Proj 374/Add_rca_32.v
+FC:/altera/Verilog Proj 374/Add_rca_32.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@add_rca_32
+!i10b 1
+!s100 D2ZV]@5lSOlV0NZ_XCF8c3
+!s85 0
+!s108 1677019098.864000
+!s107 C:/altera/Verilog Proj 374/Add_rca_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Add_rca_32.v|
+!s101 -O0
+vAdd_rca_4
+I1?=V:NTIR7fSZnN_b1TeZ1
+V8:Q][Fn8^3OOH1DJT7jG<0
+R1
+w1676059663
+8C:/altera/Verilog Proj 374/Add_rca_4.v
+FC:/altera/Verilog Proj 374/Add_rca_4.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@add_rca_4
+!i10b 1
+!s100 5DVIK?2cl_g3iTmgb<P=d0
+!s85 0
+!s108 1677019099.081000
+!s107 C:/altera/Verilog Proj 374/Add_rca_4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Add_rca_4.v|
+!s101 -O0
+vALU
+IR@Pdid03WaBIUPj;bJRlA3
+V:gg1?5X59g^=7EUNW2lDR1
+R1
+w1677015730
+8C:/altera/Verilog Proj 374/ALU.v
+FC:/altera/Verilog Proj 374/ALU.v
+L0 5
+R2
+r1
+31
+R3
+R4
+n@a@l@u
+!i10b 1
+!s100 RAdY9TTEPeij]l1G^Yzfz3
+!s85 0
+!s108 1677019098.754000
+!s107 C:/altera/Verilog Proj 374/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/ALU.v|
+!s101 -O0
+vand_tb
+!i10b 1
+!s100 K_;d`lEC2^;M:U9=gd;og1
+IC>R=zieMbWjl0:IQL<G392
+VVIA4C7@_:SS@NnDK7FEQC0
+R1
+w1677016165
+8C:/altera/Verilog Proj 374/and_tb.v
+FC:/altera/Verilog Proj 374/and_tb.v
+L0 4
+R2
+r1
+!s85 0
+31
+!s108 1677019099.408000
+!s107 C:/altera/Verilog Proj 374/and_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/and_tb.v|
+!s101 -O0
+R3
+R4
+vBooth_Mult_32
+I]LhNz_`M0a@H9ST`Q7Sf_0
+V0d7l^SUmXneNXE9lPZfU10
+R1
+w1677016856
+8C:/altera/Verilog Proj 374/Booth_Mult_32.v
+FC:/altera/Verilog Proj 374/Booth_Mult_32.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@booth_@mult_32
+!i10b 1
+!s100 _QRN^91aY@^4ZhJmUCgk_2
+!s85 0
+!s108 1677019098.643000
+!s107 C:/altera/Verilog Proj 374/Booth_Mult_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/Booth_Mult_32.v|
+!s101 -O0
+vcpu
+I@l>gN_`@GNPK5[ZOCWA=D0
+VF=lmHG0c3jDJL6JJY4UGZ1
+R1
+w1677016553
+8C:/altera/Verilog Proj 374/cpu.v
+FC:/altera/Verilog Proj 374/cpu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 YZWLS?CO9l0BMHH39kmVA3
+!s85 0
+!s108 1677019098.533000
+!s107 C:/altera/Verilog Proj 374/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/cpu.v|
+!s101 -O0
+vdivider
+I=^103d?F[E@3V=;_6RdI12
+V?KK[kcG0iGAVN[9jbDkAF0
+R1
+w1677019058
+8C:/altera/Verilog Proj 374/divider.v
+FC:/altera/Verilog Proj 374/divider.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 OUE_[le237I1?>kLE1`3l1
+!s85 0
+!s108 1677019098.424000
+!s107 C:/altera/Verilog Proj 374/divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/divider.v|
+!s101 -O0
+vencoder_32_to_5
+I4gCiABc3`oKek=UTMb;P?3
+VabeG_TRLBFPGbOR7@^DG61
+R1
+w1677015702
+8C:/altera/Verilog Proj 374/encoder_32_to_5.v
+FC:/altera/Verilog Proj 374/encoder_32_to_5.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 cF@gAe]FgLaNPN]?VaAR42
+!s85 0
+!s108 1677019098.317000
+!s107 C:/altera/Verilog Proj 374/encoder_32_to_5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/encoder_32_to_5.v|
+!s101 -O0
+vmux_2_to_1
+Id^G`5Kj5f7Em?zH;GF<B>1
+VDK]2U=D[CXz8^gEn3@0[g0
+R1
+w1676065671
+8C:/altera/Verilog Proj 374/mux_2_to_1.v
+FC:/altera/Verilog Proj 374/mux_2_to_1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 JVB4a^9NS>3I9;E;^lUTc3
+!s85 0
+!s108 1677019098.203000
+!s107 C:/altera/Verilog Proj 374/mux_2_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/mux_2_to_1.v|
+!s101 -O0
+vmux_32_to_1
+IN:l;NSH9NYAOcJW8T]UdI0
+V7HlY5d33DUF;Gj2L=U]R:0
+R1
+w1676065055
+8C:/altera/Verilog Proj 374/mux_32_to_1.v
+FC:/altera/Verilog Proj 374/mux_32_to_1.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 nRPf:D>QUCoz6lG[8n`f;3
+!s85 0
+!s108 1677019098.092000
+!s107 C:/altera/Verilog Proj 374/mux_32_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/mux_32_to_1.v|
+!s101 -O0
+vreg_32_bits
+I@MEO7He>iLb4O`f`4b>JY0
+VRbUf0i4KeNXAj5h4QYCFo1
+R1
+w1676314659
+8C:/altera/Verilog Proj 374/reg_32_bits.v
+FC:/altera/Verilog Proj 374/reg_32_bits.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 gg;UM71LZkRHFMXWTj0Ak1
+!s85 0
+!s108 1677019097.985000
+!s107 C:/altera/Verilog Proj 374/reg_32_bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/reg_32_bits.v|
+!s101 -O0
+vsub_rca_32
+IX:ba3e=5zURL1SGWn25aB3
+Vo0;i6jNQ6ckhC9Z7Zz4g`1
+R1
+w1676128408
+8C:/altera/Verilog Proj 374/sub_rca_32.v
+FC:/altera/Verilog Proj 374/sub_rca_32.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 STN1O_W=:A]Vk8WbI3mYV1
+!s85 0
+!s108 1677019097.874000
+!s107 C:/altera/Verilog Proj 374/sub_rca_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/Verilog Proj 374|C:/altera/Verilog Proj 374/sub_rca_32.v|
+!s101 -O0

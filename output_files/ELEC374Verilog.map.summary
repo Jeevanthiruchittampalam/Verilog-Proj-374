@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Feb 21 13:46:35 2023
+Analysis & Synthesis Status : Successful - Tue Feb 21 14:38:03 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : ELEC374Verilog
-Top-level Entity Name : reg_32_bits
+Top-level Entity Name : cpu
 Family : Cyclone III
-Total logic elements : 33
-    Total combinational functions : 33
-    Dedicated logic registers : 32
-Total registers : 32
-Total pins : 67
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 105
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

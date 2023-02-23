@@ -25,8 +25,8 @@ module divider(
           dividend_temp <= dividend_temp - divisor_temp;
           quotient <= quotient + bit_temp;
         end
-        divisor_temp <= {divisor_temp[30:0],1'b0};
-        bit_temp <= {bit_temp[31:1],1'b0};
+        divisor_temp <= {1'b0, divisor_temp[31:1]};
+        bit_temp <= {1'b0, bit_temp[31:1]};
       end
     end
   end
