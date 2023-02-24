@@ -2,7 +2,7 @@ module pc_reg(
 
 input clk, clr, increment, wr,
 input [31:0] D,
-output reg [31:0] Q,
+output reg [31:0] Q
 );
 
 initial Q = 0;
