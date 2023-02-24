@@ -1,4 +1,6 @@
+//this is bus
 module bus (
+
 
     //encorder inputs
     input wire r0Signal,
