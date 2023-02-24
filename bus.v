@@ -1,6 +1,4 @@
-//this is bus
 module bus (
-
 
     //encorder inputs
     input wire r0Signal,
@@ -119,7 +117,7 @@ mux_32_to_1 my_mux(
 	.BusMuxIn_InPort(BusMuxIn_InPort),
 	.C_sign_extended(C_sign_extended),
 	
-	.BusMuxOut(BusMuxOut),
+	.BusMuxOut(OutputToBus),
 
     .select_signal(connection)
 );

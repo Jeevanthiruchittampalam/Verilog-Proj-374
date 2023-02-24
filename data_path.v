@@ -65,7 +65,7 @@ reg_32_bits r15(clk, clr, R15in, bus, BusMuxIn_R15);
 
 //PC and IR
 reg_32_bits ir(clk, clr, iRin, bus, IRout); 
-reg_32_bits pc(clk, clr, incPC, PCin, bus, BusMuxIn_PC);
+pc_reg pc(clk, clr, incPC, PCin, bus, BusMuxIn_PC);
 
 // MAR and MDR
 reg_32_bits mar(clk, clr, MARin, bus, busMuxInMAR);

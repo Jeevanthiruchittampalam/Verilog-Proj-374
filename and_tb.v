@@ -140,7 +140,7 @@ begin
 		end
 		T4: begin
 
-							R3out <= 1; AND <= 1; ZIn <= 1;
+							R3out <= 1; ZIn <= 1;
 
 		end
 		T5: begin

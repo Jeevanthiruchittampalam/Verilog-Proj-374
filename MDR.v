@@ -1,7 +1,7 @@
 module MDR (
   input clk, mdr_read, clr,
   input [31:0] BusMuxOut, Mdatain, MDRin,
-  output reg [31:0] q
+  output wire [31:0] Q
 );
 
 wire [31:0] S;
@@ -18,7 +18,7 @@ reg_32_bits my_reg (
   .clr(clr),
   .enable(MDRin),
   .d(S),
-  .q(q)
+  .q(Q)
 );
 
 endmodule

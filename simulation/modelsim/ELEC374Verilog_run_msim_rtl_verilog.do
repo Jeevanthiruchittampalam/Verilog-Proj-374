@@ -5,13 +5,16 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/pc_reg.v}
+vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/data_path.v}
+vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/bus.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/sub_rca_32.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/reg_32_bits.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/mux_32_to_1.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/mux_2_to_1.v}
+vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/MDR.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/encoder_32_to_5.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/divider.v}
-vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/cpu.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Booth_Mult_32.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/ALU.v}
 vlog -vlog01compat -work work +incdir+C:/altera/Verilog\ Proj\ 374 {C:/altera/Verilog Proj 374/Add_rca_32.v}

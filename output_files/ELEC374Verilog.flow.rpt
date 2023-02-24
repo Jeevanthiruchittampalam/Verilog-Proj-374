@@ -1,5 +1,5 @@
 Flow report for ELEC374Verilog
-Thu Feb 23 20:00:28 2023
+Thu Feb 23 20:36:23 2023
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Flow Failed - Thu Feb 23 20:00:28 2023           ;
+; Flow Status                        ; Successful - Thu Feb 23 20:36:23 2023            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; ELEC374Verilog                                   ;
-; Top-level Entity Name              ; cpu                                              ;
+; Top-level Entity Name              ; data_path                                        ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; N/A until Partition Merge                        ;
-;     Total combinational functions  ; N/A until Partition Merge                        ;
-;     Dedicated logic registers      ; N/A until Partition Merge                        ;
-; Total registers                    ; N/A until Partition Merge                        ;
-; Total pins                         ; N/A until Partition Merge                        ;
-; Total virtual pins                 ; N/A until Partition Merge                        ;
-; Total memory bits                  ; N/A until Partition Merge                        ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
-; Total PLLs                         ; N/A until Partition Merge                        ;
+; Total logic elements               ; 0                                                ;
+;     Total combinational functions  ; 0                                                ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 71                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/23/2023 20:00:28 ;
+; Start date & time ; 02/23/2023 20:36:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ELEC374Verilog      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+----------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value  ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 145320168782939.167721122718104       ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 145320168782939.167721338109024       ; --             ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; and_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; and_tb                                ; --             ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --             ; --          ; eda_simulation ;
@@ -89,13 +89,13 @@ applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --             ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --             ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --             ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --             ; cpu         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; cpu         ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; cpu         ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --             ; data_path   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; data_path   ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; data_path   ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --             ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --             ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --             ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; cpu                                   ; ELEC374Verilog ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; data_path                             ; ELEC374Verilog ; --          ; --             ;
 +--------------------------------------+---------------------------------------+----------------+-------------+----------------+
 
 
@@ -104,8 +104,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 355 MB              ; 00:00:01                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 378 MB              ; 00:00:02                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
