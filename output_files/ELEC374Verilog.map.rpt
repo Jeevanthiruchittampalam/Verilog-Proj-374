@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ELEC374Verilog
-Thu Feb 23 20:36:23 2023
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Sat Feb 25 19:02:12 2023
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -103,24 +103,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 23 20:36:23 2023            ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; ELEC374Verilog                                   ;
-; Top-level Entity Name              ; data_path                                        ;
-; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 0                                                ;
-;     Total combinational functions  ; 0                                                ;
-;     Dedicated logic registers      ; 0                                                ;
-; Total registers                    ; 0                                                ;
-; Total pins                         ; 71                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Feb 25 19:02:12 2023           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ELEC374Verilog                                  ;
+; Top-level Entity Name              ; data_path                                       ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 71                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -128,7 +128,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Device                                                                     ; EP3C80F484C6       ;                    ;
 ; Top-level entity name                                                      ; data_path          ; ELEC374Verilog     ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -210,21 +210,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -996,10 +990,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Feb 23 20:36:10 2023
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Feb 25 19:02:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELEC374Verilog -c ELEC374Verilog
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
     Info (12023): Found entity 1: pc_reg
 Info (12021): Found 1 design units, including 1 entities, in source file data_path.v
@@ -1311,9 +1305,9 @@ Warning (21074): Design contains 55 input pin(s) that do not drive logic
 Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 55 input pins
     Info (21059): Implemented 16 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 241 warnings
-    Info: Peak virtual memory: 386 megabytes
-    Info: Processing ended: Thu Feb 23 20:36:23 2023
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 242 warnings
+    Info: Peak virtual memory: 387 megabytes
+    Info: Processing ended: Sat Feb 25 19:02:13 2023
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:03
 

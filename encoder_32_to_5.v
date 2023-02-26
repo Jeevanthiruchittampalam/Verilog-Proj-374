@@ -1,5 +1,5 @@
 module encoder_32_to_5 (
-input wire r0Signal,
+input wire R0out,
 input wire r1Signal,
 input wire r2Signal,
 input wire r3Signal,
