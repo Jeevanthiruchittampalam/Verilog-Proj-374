@@ -16,9 +16,30 @@ output reg [63:0] C_register
 reg[31:0] RLo, RHi; //results
 //reg prod[63:0];
 
+
 wire [31:0] ror_res, rol_res;
 rotate_right ror(ror_res, A, B);
 rotate_left rol(rol_res, A, B);
+
+wire [63:0] mult_res;
+multiplier_ALU mult(A, B, mult_res);
+
+//dision
+wire[63:0] div_res;
+divider div(A,B, div_res);
+
+//addition time
+wire [31:0] adder_sum;
+wire adder_cout; 
+
+add_32_bit ANDER(.Ra(A), .Rb(B), .cin(1'd0), .sum(adder_sum), .cout(adder_cout));
+
+//SUBtraction
+wire[31:0] sub_sum;
+wire sum_cout;
+
+sub_32_bit SUBBER(.Ra(A),.Rb(B),.cin(1'd0), .sum(sub_sum),.cout(sum_cout));
+
 
 
 
@@ -30,23 +51,26 @@ rotate_left rol(rol_res, A, B);
 			case(opcode)
 			
 					5'b00001: begin //Addition 
-							RLo <= A + B;
+							RLo <= adder_sum[31:0];
+							//RLo <= A + B; 
 							RHi <= 32'b0;
 						end 
 					
 					5'b00010: begin //Subtraction
-						RLo <= A - B;
+						RLo <= sub_sum[31:0];
 						RHi <= 32'b0;
 						end
 						
 					5'b00011: begin // Multiplication
-						RLo <= A * B;
-						RHi <= 32'b0;
+						RLo <= mult_res[31:0];
+						RHi <= mult_res[63:32];
 						end 
 						
 					5'b00100: begin //Division
-						RLo <= A / B;
-						RHi <= 32'b0;
+						RHi <= div_res[63:32];
+						RLo <= div_res[31:0];
+						//RLo<=A/B;
+						//RHi<=32'b0;
 						end
 						
 					5'b00101: begin //AND
