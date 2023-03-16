@@ -112,15 +112,19 @@ sub_32_bit SUBBER(.Ra(A),.Rb(B),.cin(1'd0), .sum(sub_sum),.cout(sum_cout));
 						RHi <= 32'b0;
 						end
 						
-					5'b01110: begin //ROL
+					5'b01100: begin //ROL
 						RLo <= rol_res;
 						RHi <= 32'b0;
 						end
 							
-					5'b01111: begin//ROR
+					5'b01101: begin//ROR
 						RLo <= ror_res;
 						RHi <= 32'b0;
 						end 
+						
+					5'b01110: begin //INCPC
+						RLo <= B + 1;
+						RHi <= 32'b0;
 						
 					default: 
 						C_register[63:0] = 64'b0;

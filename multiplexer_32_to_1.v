@@ -25,6 +25,8 @@ module multiplexer_32_to_1(
 	input [31:0] BusMuxIn_InPort,
 	input [31:0] C_sign_extended,
 	input [31:0] BusMuxIn_Y,
+	input [31:0] BusMuxIn_IR,
+	input[31:0] BusMuxIn_MAR,
 	
 	// Select signal for the multiplexer
 	input wire [4:0] select_signal,
@@ -63,6 +65,8 @@ always@(*) begin
    5'b10111: BusMuxOut <= BusMuxIn_InPort[31:0];
    5'b11000: BusMuxOut <= C_sign_extended[31:0];
 	5'b11001: BusMuxOut <= BusMuxIn_Y[31:0];
+	5'b11010: BusMuxOut <= BusMuxIn_IR[31:0];
+	5'b11011: BusMuxOut <= BusMuxIn_MAR[31:0];
 	default: BusMuxOut <= 32'd0;
 	endcase
 end

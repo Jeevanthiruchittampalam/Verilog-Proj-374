@@ -29,6 +29,8 @@ module bidirectional_bus(
     input wire InportSignal,
     input wire CSignal,
 	 input wire encoderY,
+	 input wire IRSignal,
+	 input wire MARSignal,
 	 
 	 
 	 //mux inputs start
@@ -57,6 +59,8 @@ module bidirectional_bus(
 	input [31:0] BusMuxInputs_InPort,
 	input [31:0] BusMuxInputs_C_sign_extended,
 	input [31:0] BusMuxInputs_Y,
+	input [31:0] BusMuxInputs_IR,
+	input [8:0] BusMuxInputs_MAR,
 	
 	
 	//output from bus to datapath
@@ -95,6 +99,8 @@ encoder_32_to_5_for_bus bus_encoder(
 	.InportOut(InportSignal),
 	.COut(CSignal),
 	.Yout(encoderY),
+	.IRout(IRSignal),
+	.MARout(MARSignal),
 	
 	//output of the encoder feeds to connection, which will feed to the multiplexer
 	.encoderOutput(connection)
@@ -127,6 +133,8 @@ multiplexer_32_to_1 bus_multiplexer(
 	.BusMuxIn_InPort(BusMuxInputs_InPort),
 	.C_sign_extended(BusMuxInputs_C_sign_extended),
 	.BusMuxIn_Y(BusMuxInputs_Y),
+	.BusMuxIn_IR(BusMuxInputs_IR),
+	.BusMuxIn_MAR(BusMuxInputs_MAR),
 	
 	.select_signal(connection),
 	
