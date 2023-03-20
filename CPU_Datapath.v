@@ -10,15 +10,18 @@ module CPU_Datapath(
 
 //ins are enables for the registers, outs are input signals for the encoder
 input HIin, Loin, ZHIin, ZLOin, PCin, MDRin, MARin, IRin, Yin, Zin, 
-HIout, Loout, PCout, MDRout, MARout, MDRread, Cout, clk, clr, IncPC, ZLowSelect, ZHighSelect, ZHIout, ZLOout, InPortout, OPin, 
+HIout, Loout, PCout, MDRout, MARout, MDRread, Yout, IRout, Cout, clk, clr, IncPC, ZLowSelect, ZHighSelect, ZHIout, ZLOout, InPortout, OPin, 
 
 
-input Gra, Grb, Grc, Rin, Rout, BAout, CON_FF_In, CON_FF_Out, wren,
+input Gra, Grb, Grc, Rin, Rout,
+
+input BAout,
+input CON_FF_In, CON_FF_Out, wren,
 
 input [4:0] ALUSelection,
 input[31:0] Mdatain,
 
-output[31:0] R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, HI, LO, Y, ZLO, ZHI, IR, 
+output[31:0] R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, HI, LO, Y, ZLO, ZHI, IR, OUTPORT,
 
 output [8:0] MAR, 
 
@@ -27,12 +30,27 @@ output  [63:0] Z_register
 
 );
 
+wire [31:0] mData;
+assign mData = Mdatain;
+
 wire[31:0] bus;
 //wire clr;
-wire [31:0] IROut;
+//wire [31:0] IROut;
 wire [31:0] YData, XData;
 wire[63:0] ZData;
 wire[31:0] ZHighData, ZLowData; //FROM Z_REG_64 to two seperate Z 32 Regs
+
+wire[31:0] instruction;
+//assign instruction = INPUTDATA;
+
+	
+
+
+
+//We have 2 wires? Idk which one works.
+wire [4:0] opcode;
+
+wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out;
 
 //General Registers
 
@@ -80,19 +98,18 @@ assign R14out = reg_ctrl_out[14];
 assign R15out = reg_ctrl_out[15];
 
 //RAM instatiation
-wire[31:0] dataFromRAM
-ram CPU_RAM(.data(busInMDR), .read_addr(busInMAR), .write_addr(busInMAR), .we(wren), .clk(clk), .q(dataFROMRAM));
+wire[31:0] dataFromRAM;
+ram CPU_RAM(.data(bus), .read_addr(busInMAR), .write_addr(busInMAR[8:0]), .we(wren), .clk(clk), .q(dataFromRAM));
 
 
 //Program Counter and Instruction Register
-wire[31:0] instruction;
 general_register ir_reg(IRin, clk, clr, bus, instruction);
 program_counter_register PC(PCin, IncPC, clk, clr, bus, busInPC);
 
 //MAR and MDR
 
-mar_unit MAR_reg(MARin, clk, clr, bus, busInMAR);
-MDR_register MDR(clk, clr, MDRread, MDRin, bus, Mdatain, busInMDR);
+mar_unit MAR_reg(MARin, clk, clr, bus, busInMAR[8:0]);
+MDR_register MDR(clk, clr, MDRread, MDRin, bus, dataFromRAM, busInMDR);
 
 //Y register
 general_register y(Yin, clk, clr, bus, YData);
@@ -104,21 +121,13 @@ general_register zhi(ZHIin, clk, clr, ZHighData, busInZHI);
 general_register zlo(ZLOin, clk, clr, ZLowData, busInZLO);
 z_register_64_bits z_reg_from_alu(Zin, ZLowSelect, ZHighSelect, clk, clr, ZData, ZHighData, ZLowData);
 
-//inport and outPort
 
-//general_register OUTPORT(OutPortIn, clk, clr, bus, toOutport);
-
-//assign fromInport[31:0] = INPUT[31:0];
-//general_register INPORT(InPortIn, clk, clr, fromInport, busInInport);
-
-//C Sign Extend
-//assign Cdata = (instruction[18] == 1_ ? {{13{1'b1}}, instruction[18:0]} : (13'b0, instruction[18:0]);
 
 //I/O ports
 wire[31:0] OPdata;
 wire[31:0] IPdatain;
 
-general_register IP(InPortout, clk, clr, IPdatain, busInInPort);
+general_register IP(InPortout, clk, clr, Mdatain, busInInPort);
 general_register OP(OPin, clk, clr, bus, OPdata);
 
 
@@ -126,20 +135,20 @@ general_register OP(OPin, clk, clr, bus, OPdata);
 CPU_ALU_2 my_alu(clk, bus, YData, ALUSelection, ZData);
 
 //CON FF
-CON_FF_LOGIC CON_FF_LOG_INSTANCE(instruction[18:19], bus, CON_FF_In, CON_FF_Out);
+CON_FF_LOGIC cffl_instance(instruction, bus, CON_FF_In, CON_FF_Out);
 
 //Select and Encode
 wire[31:0] CData;
-wire [15:0] regIn, regOut;
+//wire [15:0] regIn, regOut;
 wire[3:0] decoderWire;
-select_and_encode(instruction, Gra, Grb, Grc, Rin, Rout, BAout, ALUSelection, CData, regIn, regOut, decoderWire);
+select_and_encode SEL_instance(instruction, Gra, Grb, Grc, Rin, Rout, BAout, opcode, CData, reg_ctrl_in, reg_ctrl_out, decoderWire);
 
 
 
 //Bus
 bidirectional_bus my_bus(
 //enable signals for the encoder
-R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, Loout, ZHIout, ZLOout, PCout, MDRout, InPortout, Cout, Yout, IRout, MARout, 
+R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, Loout, ZHIout, ZLOout, PCout, MDRout, InPortout, Cout, Yout, IRout, MARout,
 //Yout,
 
 //inputs for the multiplexer
@@ -175,9 +184,9 @@ assign Y = YData;
 assign ZLO = busInZLO;
 assign ZHI = busInZHI;
 assign Z_register = ZData;
-assign IR = busInIR; 
+assign IR = instruction; 
 assign MAR = busInMAR; 
-assign OUTPUT = toOutport;
+assign OUTPORT = OPdata;
 
 
 
