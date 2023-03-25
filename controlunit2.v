@@ -1,4 +1,4 @@
-//This ones makes a bit more sense
+//Not this one
 
 `timescale 1ns/10ps
 module ctrl_unit(
