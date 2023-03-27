@@ -1,8 +1,10 @@
+// CPU Control Unit
+
 //This one
 
 `timescale 1ns/10ps
 module control_unit ( //32 outputs 7 inputs
-	output reg	PCout, ZHighout, ZLowout, MDRout, MAR_enable, PC_enable, MDR_enable, IR_enable, Y_enable, IncPC, MDR_read, 
+	output reg	PCout, ZHighout, ZLowout, ZHighSelect, ZLowSelect, MDRout, MAR_enable, PC_enable, MDR_enable, IR_enable, Y_enable, IncPC, MDR_read, 
 					HIin, LOin, HIout, LOout, ZHighIn, ZLowIn, Cout, RAM_write, Gra, Grb, Grc, R_enable, Rout, BAout, CON_enable,
 					enableInputPort, OutPort_enable, InPortout, Run,
 	output reg	[15:0] R_enableIn, 
@@ -37,33 +39,36 @@ always @(posedge Clock, posedge Reset, posedge Stop)
 			fetch2			:	begin	                            // //when  in the 'fetch2' state, it waits for the next rising edge of the clock before proceeding
 										@(posedge Clock);          
 										case	(IR[31:27])         //examines the top 5 bits of the instruction register ('IR') to decide the next state.
-											5'b00011		:		Present_state=add3;	
-											5'b00100		: 		Present_state=sub3;     //if the bits are this, present state equals this
-											5'b01110		:		Present_state=mul3;
-											5'b01111		:		Present_state=div3;
-											5'b00101		:		Present_state=shr3;
-											5'b00110		:		Present_state=shl3;
-											5'b00111		:		Present_state=ror3;
-											5'b01000		:		Present_state=rol3;
-											5'b01001		:		Present_state=and3;
-											5'b01010		:		Present_state=or3;
-											5'b10000		:		Present_state=neg3;
-											5'b10001		:		Present_state=not3;
+											5'b00001		:		Present_state=add3;	
+											5'b00010		: 		Present_state=sub3;     //if the bits are this, present state equals this
+											5'b00011		:		Present_state=mul3;
+											5'b00100		:		Present_state=div3;
+											5'b01011		:		Present_state=shr3;
+											5'b01010		:		Present_state=shl3;
+											5'b01101		:		Present_state=ror3;
+											5'b01100		:		Present_state=rol3;
+											5'b00101		:		Present_state=and3;
+											5'b00110		:		Present_state=or3;
+											5'b00111		:		Present_state=neg3;
+											5'b01000		:		Present_state=not3;
+											
+											//
+											
 											5'b00000		:		Present_state=ld3;
-											5'b00001		:		Present_state=ldi3;
-											5'b00010		:		Present_state=st3;
-											5'b01011		:		Present_state=addi3;
-											5'b01100		:		Present_state=andi3;
-											5'b01101		:		Present_state=ori3;
+											5'b01001		:		Present_state=ldi3;
+											5'b01110		:		Present_state=st3;
+											5'b01111		:		Present_state=addi3;
+											5'b10000		:		Present_state=andi3;
+											5'b10001		:		Present_state=ori3;
 											5'b10010		:		Present_state=br3;
 											5'b10011		:		Present_state=jr3;
 											5'b10100		:		Present_state=jal3;
-											5'b10111		:		Present_state=mfhi3;
-											5'b11000		:		Present_state=mflo3;
-											5'b10101		:		Present_state=in3;
-											5'b10110		:		Present_state=out3;
-											5'b11001		:		Present_state=nop3;
-											5'b11010		:		Present_state=halt3;
+											5'b10101		:		Present_state=mfhi3;
+											5'b10111		:		Present_state=mflo3;
+											5'b11000		:		Present_state=in3;
+											5'b11001		:		Present_state=out3;
+											5'b11010		:		Present_state=nop3;
+											5'b11011		:		Present_state=halt3;
 										endcase
 									end
 			add3				: 	#40 Present_state = add4;
@@ -111,7 +116,7 @@ always @(posedge Clock, posedge Reset, posedge Stop)
 			ror3				: 	#40 Present_state = ror4;
 			ror4				: 	#40 Present_state = ror5;
 			ror5 				:	#40 Present_state = fetch0;
-			# 
+			 
 			neg3				: 	#40 Present_state = neg4;
 			neg4				: 	#40 Present_state = fetch0;
 			 
